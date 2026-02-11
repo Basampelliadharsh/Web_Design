@@ -1,0 +1,37 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(235, 240, 245);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loginform{
+    text-align: center;
+    background-color: rgb(195, 237, 243);
+    padding: 30px;
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+}
+#loginform h2{
+    margin-bottom: 40px;
+}
+#loginform input{
+    width: 80%;
+    padding: 8px;
+    border: 1px;
+    border-radius: 4px;
+}
+#loginform button{
+    width: 80px;
+    padding: 8px;
+    background-color: rgb(73, 245, 116);
+    color: black;
+    border: none;
+    margin-top: 10px;
+}
+#loginform button:hover{
+    background-color: rgb(43, 122, 242);
+}
