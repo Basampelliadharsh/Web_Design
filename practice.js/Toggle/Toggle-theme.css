@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+}
+.login-box{
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 6px;
+}
+input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid#ccc;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #333;
+    color: #eee;
+}
+.text{
+    margin-top: 10px;
+    font-size: 14px;
+}
+body dark-mode.login-box{
+    background-color: #777;
+}
+.dark-mode input{
+    background-color: #777;
+    color: #eee;
+    border: 1px solid #999;
+}
+.theme-font{
+    font-size: 24px;
+    cursor:pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #333;
+}
+body.dark-mode.theme-icon{
+    color: #eee;
+}
