@@ -1,4 +1,4 @@
-let students = ["mahesh", "suresh", "ramesh", "suresh"];
+/*let students = ["mahesh", "suresh", "ramesh", "suresh"];
 console.log(students);
 console.log(students[0]);
 console.log(students[1]);
@@ -39,6 +39,7 @@ for (let i = 0; i < students.length; i++) {
 }
 console.log("The number of times mahesh appears is:", count);
 
+
 let word = "javascript";
 console.log(word.slice(4));
 console.log(word.includes("script"));
@@ -59,3 +60,7 @@ if (username.length >= 6) {
 } else {
   console.log("username must contain atleast 6 letters");
 }
+*/
+let students = ["ramesh","don","man"]
+students.shift();
+console.log(students);

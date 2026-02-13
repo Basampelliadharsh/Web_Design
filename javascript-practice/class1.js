@@ -40,6 +40,8 @@ let students = [
   "suresh",
   "suresh",
 ];
+console.log(students);
+console.log(students[0]);
 let count = 0;
 //console.log(students.length);;
 
@@ -51,5 +53,12 @@ for (let i = 0; i < students.length; i++) {
 }
 console.log(count);
 
+let names = ["adarsh","ranjith","vishwanath"];
+console.log(names[0].toUpperCase());
+console.log(names[1].toUpperCase());
+console.log(names[2].toUpperCase());
+let namess = 'saikumar'
+console.log(namess[0].toUpperCase());
+console.log(namess.toUpperCase());
  
 
