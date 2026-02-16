@@ -143,7 +143,7 @@ for (let i = 0; i < person.length; i++) {
   console.log(person[i].name);
 }
 //if else statememts
-let value = 10; 
+let value = 10;
 if (value % 2 == 0) {
   console.log("even");
 } else {
@@ -156,10 +156,12 @@ if (age >= 18) {
   console.log("boy");
 }
 let mark = 90;
-if (mark>=90){console.log("excellent")
-}else if (mark>=70){
-    console.log("good");
-} else if (mark>=30){
-    console.log("poor");
-}else{ console.log("poor");
+if (mark >= 90) {
+  console.log("excellent");
+} else if (mark >= 70) {
+  console.log("good");
+} else if (mark >= 30) {
+  console.log("poor");
+} else {
+  console.log("poor");
 }
