@@ -105,16 +105,61 @@ car.color = "black";
 console.log(car);
 car.price = 1600000;
 console.log(car);
-let data = [{name:"sainath",age:22,branch:"BA"},
-    {name:"adarsh",age:19,branch:"cse"},
-    {name:"vishwa",age:20,branch:"ece"},
-    {name:"rohith",age:24,branch:"civil"},
+let data = [
+  { name: "sainath", age: 22, branch: "BA" },
+  { name: "adarsh", age: 19, branch: "cse" },
+  { name: "vishwa", age: 20, branch: "ece" },
+  { name: "rohith", age: 24, branch: "civil" },
 ];
-for (let i = 0;i<data.length; i++){
-    console.log(data[i].name);
+for (let i = 0; i < data.length; i++) {
+  console.log(data[i].name);
 }
-let employe = {name:"saikumar",age:23,salary:140000,role:"back end developer"};
+let employe = {
+  name: "saikumar",
+  age: 23,
+  salary: 140000,
+  role: "back end developer",
+};
 console.log(employe.name);
 console.log(employe.age);
 console.log(employe.salary);
 console.log(employe.role);
+//
+let word = "sunnamranjithkumar";
+let vowels = "aeiou";
+let count = 0;
+for (let char of word) {
+  if (vowels.includes(char)) {
+    count++;
+  }
+}
+console.log("number of vowels:", count);
+let person = [
+  { name: "saikumar", dob: 2006, vill: "ylp" },
+  { name: "ranjith", dob: 2005, vill: "pdp" },
+  { name: "adarsh", dob: 2004, vill: "llp" },
+];
+for (let i = 0; i < person.length; i++) {
+  console.log(person[i].name);
+}
+//if else statememts
+let value = 10; 
+if (value % 2 == 0) {
+  console.log("even");
+} else {
+  console.log("odd");
+}
+let age = 20;
+if (age >= 18) {
+  console.log("man");
+} else {
+  console.log("boy");
+}
+let mark = 90;
+if (mark>=90){console.log("excellent")
+}else if (mark>=70){
+    console.log("good");
+} else if (mark>=30){
+    console.log("poor");
+}else{ console.log("poor");
+}
