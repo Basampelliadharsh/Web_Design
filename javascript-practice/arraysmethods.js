@@ -266,3 +266,4 @@ let num3 = [2, 4, 5, 6, 7];
 num3.forEach(function (n) {
   console.log(n);
 });
+

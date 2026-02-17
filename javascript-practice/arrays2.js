@@ -165,3 +165,51 @@ if (mark >= 90) {
 } else {
   console.log("poor");
 }
+//
+let num3 = [2, 4, 5, 6, 7];
+num3.forEach(function (n) {
+  console.log(n);
+});
+//
+let lnumber = [33, 4, 55, 7, 76];
+let largest = lnumber[0];
+if (lnumber[1] > largest) {
+  largest = lnumber[1];
+}
+largest = largest;
+
+if (lnumber[2] > largest) {
+  largest = lnumber[2];
+}
+if (lnumber[3] > largest) {
+  largest = lnumber[3];
+}
+
+if (lnumber[4] > largest) {
+  largest = lnumber[4];
+}
+console.log(largest);
+//
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+}
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+  sum += i;
+}
+console.log(sum);
+
+let numberss = [23, 45, 64, 77, 86];
+let largestt = numberss[0];
+for (let i = 1; i < numbers.length; i++) {
+  if (numberss[i] > largest) {
+    largestt = numberss[i];
+  }
+}
+console.log(largestt);
+
+var sums =function (numss1,numss2){
+  var result=numss1+numss2
+  return result
+}
+console.log(sums(76,78));
