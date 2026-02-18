@@ -3,8 +3,6 @@ const dynamicContentDiv = document.getElementById("dynamicContent");
 const up = document.getElementById("testBtn");
 const form = document.getElementById("check");
 const demo = document.getElementById("point");
-const momo = document.getElementById("output");
-
 updateContentButton.addEventListener("click", function () {
   dynamicContentDiv.innerHTML = "<p>Quick check</p>";
 });
@@ -17,6 +15,16 @@ form.addEventListener("click", function () {
 demo.addEventListener("click", function () {
   dynamicContentDiv.innerHTML = "<p>tomorrow we will connect</p>";
 });
-momo.addEventListener("click", function () {
-  dynamicContentDiv.innerHTML = "<p>are we ready</p>";
+const elementsContainer = document.getElementById("elementsContainer");
+const createElementBtn = document.getElementById("createElementBtn");
+
+createElementBtn.addEventListener("click", () => {
+  const newParagraph = document.createElement("p");
+  newParagraph.textContent = `Dynamically created element`;
+  elementsContainer.appendChild(newParagraph);
+});
+deleteFirstElementBtn.addEventListener("click", () => {
+  if (elementsContainer.children.length > 0) {
+    elementsContainer.removeChild(elementsContainer.children[0]);
+  }
 });
