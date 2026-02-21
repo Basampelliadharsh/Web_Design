@@ -213,3 +213,23 @@ var sums =function (numss1,numss2){
   return result
 }
 console.log(sums(76,78));
+//
+let prime = [3,45,67,98,29];
+for (let i =0;i<=prime.length;i++){
+  let num = prime[i];
+  let count = 0;
+
+  for (let j = 1;j<=num;j++){
+    if (num%j==0){
+      count++;
+    }
+  }
+  if (count==2){
+    console.log(num);
+  }
+}
+let pali = ('MARKRAM');
+let original=pali;
+let riverse = 0;
+
+
