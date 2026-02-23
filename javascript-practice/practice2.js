@@ -61,6 +61,35 @@ if (username.length >= 6) {
   console.log("username must contain atleast 6 letters");
 }
 */
-let students = ["ramesh","don","man"]
+let students = ["ramesh", "don", "man"];
 students.shift();
 console.log(students);
+function checkEvenOdd(num) {
+  if (num % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
+}
+console.log(checkEvenOdd(10));
+console.log(checkEvenOdd(7));
+console.log(checkEvenOdd(5));
+
+function findLargest(a, b, c) {
+  if (a > b && a > c) {
+    return a;
+  } else if (b > a && b > c) {
+    return b;
+  } else {
+    return c;
+  }
+}
+
+console.log(findLargest(33, 5, 55));
+
+function isPalindrome(str) {
+  let reversed = 
+  str.split("").reverse().join("");
+  return str === reversed;
+}
+console.log("markram");
