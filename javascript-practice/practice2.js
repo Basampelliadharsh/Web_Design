@@ -88,8 +88,35 @@ function findLargest(a, b, c) {
 console.log(findLargest(33, 5, 55));
 
 function isPalindrome(str) {
-  let reversed = 
-  str.split("").reverse().join("");
+  let reversed = str.split("").reverse().join("");
   return str === reversed;
 }
 console.log("markram");
+let word = "Adharsh";
+let riversed = "";
+for (let i = word.length - 1; i >= 0; i--) {
+  riversed += word[i];
+  console.log(riversed);
+}
+
+for (let i = 1; i <= 5; i++) {
+  let num = "";
+  for (let j = 5; j >= i; j--) {
+    num += j;
+  }
+  console.log(num);
+}
+for (let i=1;i<=5;i++){
+  let num = "";
+  for (let j=1;j<=i;j++){
+    num += j;
+}
+  console.log(num);
+}
+for (let i=1;i<=5;i++){
+  let num = "";
+  for (let j=1;j<=i;j++){
+    num += i;
+  }
+  console.log(num);
+}

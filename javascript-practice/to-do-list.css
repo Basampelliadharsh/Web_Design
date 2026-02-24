@@ -122,6 +122,16 @@ h1 {
 #tasks-completed {
     color: #007bff;
     font-weight: bold;
+
 }
  
- 
+ #task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+ }
