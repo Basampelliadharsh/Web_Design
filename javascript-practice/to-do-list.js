@@ -1,6 +1,7 @@
 const inputField = document.getElementById("new-task-input");
 const buttonTask = document.getElementById("add-task-btn");
 const taskList = document.getElementById("task-list");
+
 buttonTask.addEventListener("click", () => {
   const taskContent = inputField.value.trim();
   if (taskContent === "") {
@@ -8,56 +9,62 @@ buttonTask.addEventListener("click", () => {
     return;
   }
   const li = document.createElement("li");
+  li.className = "task-item";
+
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
-  const span = document.createElement("span");
-  span.textContent = taskContent;
+  const cbId = `task-${Date.now()}`;
+  checkbox.id = cbId;
+
+  const label = document.createElement("label");
+  label.htmlFor = cbId;
+  label.textContent = taskContent;
+
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "🗑️";
+  deleteButton.className = "delete-task-icon";
+
   li.appendChild(checkbox);
-  li.appendChild(span);
+  li.appendChild(label);
   li.appendChild(deleteButton);
   taskList.appendChild(li);
   inputField.value = "";
-  checkbox.addEventListener("change", () => {
-    if (this.checked) {
-      span.style.textDecoration = "line-through";
-      span.style.color = "gray";
+  updateTasks();
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      li.classList.add("completed");
     } else {
-      span.style.textDecoration = "none";
-      span.style.color = "black";
+      li.classList.remove("completed");
     }
+    updateTasks();
   });
+
   deleteButton.addEventListener("click", () => {
     li.remove();
+    updateTasks();
   });
 });
 
-const taskscompleted = document.getElementById("tasks-completed");
-function updateTasksCompleted() {
+function updateTasks() {
   const totalTasks = taskList.children.length;
   const completedTasks = taskList.querySelectorAll(
     "input[type='checkbox']:checked",
   ).length;
   const remainingTasks = totalTasks - completedTasks;
-  tasksremaining.textContent = `Remaining Tasks: ${remainingTasks}`;
+
+  const completedEl = document.getElementById("tasks-completed");
+  const remainingEl = document.getElementById("tasks-remaining");
+
+  if (completedEl) completedEl.textContent = `${completedTasks} completed`;
+  if (remainingEl)
+    remainingEl.textContent = `${remainingTasks} tasks remaining`;
 }
-taskList.addEventListener("change", updateTasksCompleted);
+
+updateTasks();
+taskList.addEventListener("change", updateTasks);
 taskList.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
-    updateTasksCompleted();
-  }
-});
-const taskcompleted = document.getElementById("tasks-completed");
-function updateTasksCompleted() {
-  const completedTasks = taskList.querySelectorAll(
-    "input[type='checkbox']:checked",
-  ).length;
-  taskscompleted.textContent = `Tasks completed: ${completedTasks}`;
-}
-taskList.addEventListener("chabnge", updateTasksCompleted);
-taskList.addEventListener("click", (event) => {
-  if (event.target.tagName === "BUTTON") {
-    updateTasksCompleted();
+    updateTasks();
   }
 });
