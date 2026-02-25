@@ -120,3 +120,44 @@ for (let i=1;i<=5;i++){
   }
   console.log(num);
 }
+function factorial(n){
+  let result = 1;
+    return 1;
+  for (let i=1;i<=n;i++){
+    result = result * i;
+  }
+  return result;
+  }
+  console.log(factorial(10));
+  function sumArray(arr){
+    let sum = 0;
+    for (let i=0;i<arr.length;i++){
+      sum += arr[i];
+    }
+    return sum;
+  }
+  console.log(sumArray([1,2,3,4,5]));
+  function findLargestInArray(arr){
+    let largest = arr[0];
+    for (let i=1;i<arr.length;i++){
+      if (arr[i]>largest){
+        largest = arr[i];
+      }
+      result = largest;
+    }
+    return result;
+  }
+  console.log(findLargestInArray([33,4,55,7,76]));
+  function fibonacci(n){
+    if (n<=1) return n;
+    return fibonacci(n-1)+fibonacci(n-2);
+  }
+  console.log(fibonacci(10));
+  function capitalWords(str){
+    let words = str.split(" ");
+    for (let i=0;i<words.length;i++){
+      words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+    }
+    return words.join(" ");
+  }
+console.log(capitalWords("hello peter parkour"));
