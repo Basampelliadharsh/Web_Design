@@ -106,58 +106,82 @@ for (let i = 1; i <= 5; i++) {
   }
   console.log(num);
 }
-for (let i=1;i<=5;i++){
+for (let i = 1; i <= 5; i++) {
   let num = "";
-  for (let j=1;j<=i;j++){
+  for (let j = 1; j <= i; j++) {
     num += j;
-}
+  }
   console.log(num);
 }
-for (let i=1;i<=5;i++){
+for (let i = 1; i <= 5; i++) {
   let num = "";
-  for (let j=1;j<=i;j++){
+  for (let j = 1; j <= i; j++) {
     num += i;
   }
   console.log(num);
 }
-function factorial(n){
+function factorial(n) {
   let result = 1;
-    return 1;
-  for (let i=1;i<=n;i++){
+  return 1;
+  for (let i = 1; i <= n; i++) {
     result = result * i;
   }
   return result;
+}
+console.log(factorial(10));
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
   }
-  console.log(factorial(10));
-  function sumArray(arr){
-    let sum = 0;
-    for (let i=0;i<arr.length;i++){
-      sum += arr[i];
+  return sum;
+}
+console.log(sumArray([1, 2, 3, 4, 5]));
+function findLargestInArray(arr) {
+  let largest = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
     }
-    return sum;
+    result = largest;
   }
-  console.log(sumArray([1,2,3,4,5]));
-  function findLargestInArray(arr){
-    let largest = arr[0];
-    for (let i=1;i<arr.length;i++){
-      if (arr[i]>largest){
-        largest = arr[i];
-      }
-      result = largest;
-    }
-    return result;
+  return result;
+}
+console.log(findLargestInArray([33, 4, 55, 7, 76]));
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+console.log(fibonacci(10));
+function capitalWords(str) {
+  let words = str.split(" ");
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
   }
-  console.log(findLargestInArray([33,4,55,7,76]));
-  function fibonacci(n){
-    if (n<=1) return n;
-    return fibonacci(n-1)+fibonacci(n-2);
-  }
-  console.log(fibonacci(10));
-  function capitalWords(str){
-    let words = str.split(" ");
-    for (let i=0;i<words.length;i++){
-      words[i] = words[i][0].toUpperCase() + words[i].slice(1);
-    }
-    return words.join(" ");
-  }
+  return words.join(" ");
+}
 console.log(capitalWords("hello peter parkour"));
+function pow(base, exponent) {
+  let result = 1;
+  for (let i = 0; i < exponent; i++) {
+    result *= base;
+  }
+  return result;
+}
+console.log(pow(2, 3));
+console.log(pow(5, 2));
+console.log(pow(3, 4));
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total = sum += arr[i];
+  }
+  return total;
+}
+const numbers = [1, 2, 3, 4, 5];
+console.log(sumArray(numbers));
+function coinFlip() {
+  const result = Math.random() < 0.5 ? "heads" : "tails";
+  return result;
+}
+console.log(coinFlip());
