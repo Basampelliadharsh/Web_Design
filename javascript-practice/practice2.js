@@ -185,3 +185,39 @@ function coinFlip() {
   return result;
 }
 console.log(coinFlip());
+
+function calculator(a, b, operator) {
+  switch (operator) {
+    case "+":
+      return a + b;
+    case "-":
+      return a - b;
+    case "*":
+      return a * b;
+    case "/":
+      return a / b;
+    default:
+      return "Invalid operator";
+  }
+}
+console.log(calculator(10, 90, "+"));
+console.log(calculator(777, 4855, "-"));
+console.log(calculator(10, 98, "*"));
+console.log(calculator(567, 2098, "/"));
+
+
+const str = "methods in strings";
+console.log(str.slice(0, 7));
+console.log(str.includes("in"));
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.length);
+console.log(str.indexOf("in"));
+console.log(str.lastIndexOf("in"));
+console.log(str.replace("in", "on"));
+console.log(str.split(" "));
+console.log(str.trim());
+console.log(str.charAt(5));
+console.log(str.charCodeAt(5));
+console.log(str.startsWith("methods"));
+console.log(str.endsWith("strings"));
