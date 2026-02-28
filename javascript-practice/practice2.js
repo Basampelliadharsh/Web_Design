@@ -205,7 +205,6 @@ console.log(calculator(777, 4855, "-"));
 console.log(calculator(10, 98, "*"));
 console.log(calculator(567, 2098, "/"));
 
-
 const str = "methods in strings";
 console.log(str.slice(0, 7));
 console.log(str.includes("in"));
@@ -221,3 +220,24 @@ console.log(str.charAt(5));
 console.log(str.charCodeAt(5));
 console.log(str.startsWith("methods"));
 console.log(str.endsWith("strings"));
+
+const person = {
+  name: "Adharsh",
+  age: 20,
+  city: "chennai",
+};
+greet();
+function greet() {
+  console.log("Hello, " + person.name + "!");
+}
+const car = {
+  make: "Toyota",
+  model: "Camry",
+  year: 2020,
+  getCarInfo: function () {
+    return this.year + " " + this.make + " " + this.model;
+  },
+};
+console.log(car.getCarInfo());
+
+
