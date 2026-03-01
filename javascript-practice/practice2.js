@@ -241,3 +241,25 @@ const car = {
 console.log(car.getCarInfo());
 
 
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr2 = arr.concat([11, 12, 13]);
+console.log(arr2);
+let isEven = arr.every( x => x % 2 === 0);
+console.log(isEven);
+let Evens = arr.filter(x => x % 2 === 0);
+console.log(Evens);
+let found = arr.find(x => x > 5);
+console.log(found);
+arr.forEach(x => console.log(x));
+console.log(arr.includes(5));
+console.log(arr.indexOf(7));
+console.log(arr.lastIndexOf(8));
+arr.splice(1,5);
+console.log(arr);
+arr.sort((a, b) => a - b);
+console.log(arr);
+arr.unshift(0);
+console.log(arr);
+
+
