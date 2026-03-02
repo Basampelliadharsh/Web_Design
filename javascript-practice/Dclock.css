@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border:2px solid;
+}
+#clk{
+    font-family: 'Arial', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+}
