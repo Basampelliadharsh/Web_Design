@@ -15,3 +15,4 @@ subBtn.addEventListener("click", function () {
   const difference = num1 - num2;
   result.textContent = "The difference of the two numbers is: " + difference;
 });
+
