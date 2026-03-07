@@ -1,0 +1,90 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  width: 60%;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Form heading */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+/* Inputs, selects, textarea */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Radio buttons inline */
+.form-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Error messages */
+.error-message {
+  font-size: 12px;
+  color: red;
+  margin-top: 3px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}
