@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="employeeReg.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h2>Employee Registration Form</h2>
+
+        <div class="form-group">
+          <label for="empId">Employee ID:</label>
+          <input type="text" id="empId" name="empId" />
+          <span id="empIdError" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="empName">Employee Name:</label>
+          <input type="text" id="empName" name="empName" />
+          <span id="empNameError" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="empEmail">Employee Email:</label>
+          <input type="email" id="empEmail" name="empEmail" />
+          <span id="empEmailError" class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="empDept">Department:</label>
+          <select id="empDept" name="empDept">
+            <option value="">--Select Department--</option>
+            <option value="hr">HR</option>
+            <option value="it">IT</option>
+            <option value="finance">Finance</option>
+            <option value="marketing">Marketing</option>
+          </select>
+          <span id="empDeptError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="empDob">Date of Birth:</label>
+          <input type="date" id="empDob" name="empDob" />
+          <span id="empDobError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="empGender">Gender:</label>
+          <input type="radio" id="genderMale" name="empGender" value="male" />
+          <label for="genderMale">Male</label>
+          <input
+            type="radio"
+            id="genderFemale"
+            name="empGender"
+            value="female"
+          />
+          <label for="genderFemale">Female</label>
+          <span id="empGenderError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label>spouse</label>
+          <input type="radio" id="spouseYes" name="spouse" value="yes" />
+          <label for="spouseYes">Yes</label>
+          <input type="radio" id="spouseNo" name="spouse" value="no" />
+          <label for="spouseNo">No</label>
+          <input
+            type="text"
+            id="spouseName"
+            name="spouseName"
+            placeholder="Spouse Name"
+          />
+          <span id="spouseError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="empPhone">Phone Number:</label>
+          <input type="tel" id="empPhone" name="empPhone" />
+          <span id="empPhoneError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="empAddress">Address:</label>
+          <textarea id="empAddress" name="empAddress"></textarea>
+          <span id="empAddressError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary:</label>
+          <input type="number" id="salary" name="salary" />
+          <span id="salaryError" class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+    <script src="employeeReg.js"></script>
+  </body>
+</html>
