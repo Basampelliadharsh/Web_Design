@@ -3,12 +3,12 @@ console.log("Adharsh");
 console.log("vishwanath");
 console.log("electronics and communication engineering");
 console.log("hyderabad");
-console.log( "we are arthematic operators");
-let a=10;
-let b=40;
-let c=a+b;
+console.log("we are arthematic operators");
+let a = 10;
+let b = 40;
+let c = a + b;
 console.log("adition of two numbers");
-let d=a-b;
+let d = a - b;
 console.log("subraction of two numbers");
 function addNumbers(number1, number2) {
   let sum = number1 + number2;
@@ -53,12 +53,37 @@ for (let i = 0; i < students.length; i++) {
 }
 console.log(count);
 
-let names = ["adarsh","ranjith","vishwanath"];
+let names = ["adarsh", "ranjith", "vishwanath"];
 console.log(names[0].toUpperCase());
 console.log(names[1].toUpperCase());
 console.log(names[2].toUpperCase());
-let namess = 'saikumar'
+let namess = "saikumar";
 console.log(namess[0].toUpperCase());
 console.log(namess.toUpperCase());
- 
 
+import * as yup from "yup";
+const schema = yup.object().shape({
+  name: yup.string().required("Name is required"),
+  email: yup
+    .string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  age: yup
+    .number()
+    .positive("Age must be a positive number")
+    .integer("Age must be an integer")
+    .required("Age is required"),
+});
+const user = {
+  name: "Adarsh",
+  email: "adarsh@example.com",
+  age: 20,
+};
+schema
+  .validate(user)
+  .then(() => {
+    console.log("User data is valid.");
+  })
+  .catch((error) => {
+    console.error("Validation error:", error.message);
+  });
