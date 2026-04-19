@@ -1,11 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Online Library Management</title>
+<style>
+body{
+font-family: Arial;
+text-align:center;
+background:#f2f2f2;
+}
+
+.container{
+background:white;
+width:350px;
+margin:auto;
+padding:20px;
+margin-top:80px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+input,button{
+padding:10px;
+margin:5px;
+width:90%;
+}
+
+.hidden{
+display:none;
+}
+</style>
 </head>
+
 <body>
-    
+
+<!-- Login Section -->
+<div class="container" id="loginPage">
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Enter Username">
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<p id="error" style="color:red;"></p>
+</div>
+
+
+<!-- Dashboard Section -->
+<div class="container hidden" id="dashboard">
+<h2>Library Dashboard</h2>
+
+<input type="text" id="bookSearch" placeholder="Search Book">
+
+<button onclick="searchBook()">Search</button>
+
+<p id="result"></p>
+
+<button onclick="issueBook()" id="issueBtn" class="hidden">Issue Book</button>
+
+<button onclick="returnBook()" id="returnBtn" class="hidden">Return Book</button>
+
+</div>
+
+
+<script>
+
+function login(){
+
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="1234")
+{
+document.getElementById("loginPage").classList.add("hidden");
+document.getElementById("dashboard").classList.remove("hidden");
+}
+else
+{
+document.getElementById("error").innerText="Invalid Credentials";
+}
+
+}
+
+function searchBook(){
+
+let book=document.getElementById("bookSearch").value;
+
+if(book.toLowerCase()=="wings of fire")
+{
+document.getElementById("result").innerText="Book Available";
+document.getElementById("issueBtn").classList.remove("hidden");
+}
+else
+{
+document.getElementById("result").innerText="Book Not Available";
+}
+
+}
+
+function issueBook(){
+document.getElementById("result").innerText="Book Issued Successfully";
+document.getElementById("issueBtn").classList.add("hidden");
+document.getElementById("returnBtn").classList.remove("hidden");
+}
+
+function returnBook(){
+document.getElementById("result").innerText="Book Returned Successfully";
+document.getElementById("returnBtn").classList.add("hidden");
+}
+
+</script>
+
 </body>
 </html>
