@@ -8,7 +8,7 @@
 .form {
     display: flex;
     height: 100px;
-    width: 100px;
+    width: 200px;
     flex-direction: row;
     align-items: center;
     margin-top: 60px;
@@ -17,16 +17,28 @@
 #c1{
     display: flex;
     background-color: aqua;
+    background-image: url(https://tse2.mm.bing.net/th/id/OIP.8beeAU2dF7qLkDL9vHqFpAHaEK?pid=Api&P=0&h=180);
+    background-position: center;
+    background-size: cover;
 }
 #c2{
     display: flex;
     background-color: aquamarine;
+    background-image: url(https://tse2.mm.bing.net/th/id/OIP.PR8TpxA3CCV1Ra1e_J1rCwHaEK?pid=Api&P=0&h=180);
+    background-size: cover;
 }
 #c3{
     display:flex ;
     background-color: rgb(168, 168, 223);
+    background-image:url(https://tse1.mm.bing.net/th/id/OIP.IoU7hls9NaAnBpjbt0Fy5QHaEK?pid=Api&P=0&h=180) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 #c4{
     display: flex;
     background-color: burlywood;
+    background-image: url(https://tse4.mm.bing.net/th/id/OIP.MqQCshyVVpEsZCy6euZcHwHaEK?pid=Api&P=0&h=180);
+    background-position: center;
+    background-size: cover;
 }
