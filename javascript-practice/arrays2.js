@@ -244,3 +244,14 @@ function twoSum(nums, target){
   return[];
 }
 console.log(twoSum([2,7,11,15],9))
+
+function hasDuplicate(nums) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] === nums[j]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
